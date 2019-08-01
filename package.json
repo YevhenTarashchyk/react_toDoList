@@ -9,10 +9,10 @@
     "synp": "^1.6.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "webpack --config webpack.build.conf.js",
+    "dev": "webpack-dev-server --open --config webpack.dev.conf.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,12 +21,17 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "last 3 version"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
   }
 }
