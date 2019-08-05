@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Route, Link, HashRouter } from 'react-router-dom';
 
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
@@ -82,7 +82,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <HashRouter>
         <div className="container">
           <div className="content-area row">
             <div className="col-md-8 col-xs-8 col-lg-8 col-sm-8">
@@ -116,7 +116,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }
