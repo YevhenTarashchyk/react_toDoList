@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import '../scss/main.scss';
 
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';

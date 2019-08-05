@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class AddTodo extends Component {
+export class AddTodo extends Component {
   state = {
     title: ''
   };
@@ -29,7 +29,7 @@ class AddTodo extends Component {
           />
         </div>
         <div className="form-group col-md-1">
-          <button className="btn btn-primary" type="submit" value="submit">
+          <button className="btn btn-primary" type="submit">
             Add
           </button>
         </div>

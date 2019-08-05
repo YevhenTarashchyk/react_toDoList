@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class TodoItem extends Component {
+export class TodoItem extends Component {
   getStyle = () => {
     return {
       textDecoration: this.props.todo.completed ? 'line-through' : 'none'
