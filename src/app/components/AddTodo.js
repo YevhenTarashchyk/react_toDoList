@@ -6,17 +6,17 @@ class AddTodo extends Component {
     title: ''
   };
 
-  onSubmit = e => {
+  handleSubmit = e => {
     e.preventDefault();
     this.props.addTodo(this.state.title);
     this.setState({ title: '' });
   };
 
-  onChange = e => this.setState({ [e.target.name]: e.target.value });
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     return (
-      <form className="row input-area" onSubmit={this.onSubmit}>
+      <form className="row input-area" onSubmit={this.handleSubmit}>
         <div className="form-group col-md-9">
           <input
             type="text"
@@ -25,7 +25,7 @@ class AddTodo extends Component {
             className="form-control"
             id="addTask"
             value={this.state.title}
-            onChange={this.onChange}
+            onChange={this.handleChange}
           />
         </div>
         <div className="form-group col-md-1">
